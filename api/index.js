@@ -55,9 +55,9 @@ app.get('/', async (req, res, next) => {
 	}
 });
 
-const viewsFolderPath = path.resolve(__dirname, './views');
+//const viewsFolderPath = path.resolve(__dirname, './views');
 app.set('view engine', 'ejs');
-app.set('views', viewsFolderPath);
+//app.set('views', viewsFolderPath);
 
 app.post('/', saveMsgController);
 
