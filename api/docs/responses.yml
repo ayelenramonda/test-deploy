@@ -1,0 +1,187 @@
+components:
+  schema:
+    Productos:
+      Producto:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id del producto
+          title:
+            type: string
+            description: Titulo del producto
+          price:
+            type: number
+            description: Precio del producto
+          thumbnail:
+            type: string
+            description: Foto del producto
+          stock:
+            type: number
+            description: cantidad del producto
+        example:
+          id: 6427ff9f645a359be028d382
+          title: tenedor
+          price: 500
+          thumbnail: https://cdn-icons-png.flaticon.com/512/3172/3172766.png
+          image: 20000
+      getAllProductos:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              example: 6427ff9f645a359be028d382
+            title:
+              type: string
+              example: tenedor
+            price:
+              type: number
+              example: 500
+            thumbnail:
+              type: string
+              example: https://cdn-icons-png.flaticon.com/512/3172/3172766.png
+            stock:
+              type: number
+              example: 20000
+      errorGetById:
+        type: object
+        properties:
+          message:
+            type: string
+            description: No se encontro el id
+        example:
+          message: No se encontró el id 640c4ff1b8efc401d8f30913
+      NotFound:
+        type: string
+        description: No se pudo guardar el producto
+      deleteById:
+        type: string
+        description: producto eliminado
+    Carritos:
+      Carrito:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id del carrito
+          timestamp:
+            type: string
+            description: fecha y hora de la creacion del carrito
+          productos:
+            type: array
+            description: productos que se van a agregar al carrito
+        example:
+          id: 638664bd9fc58e11f6dd7583
+          timestamp: Tuesday, November 29, 2022 4:59 PM
+          productos:
+            {
+              id: 63861a90553d6ceceba06b79,
+              title: papel para envolver,
+              price: 1280,
+              thumbnail: https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Pencil-256.png,
+              stock: 10
+            }
+      getAllCarritos:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              example: 638664bd9fc58e11f6dd7583
+            timestamp:
+              type: string
+              example: Tuesday, November 29, 2022 4:59 PM
+      errorGetByIdCarr:
+        type: object
+        properties:
+          message:
+            type: string
+            description: No se encontro el id
+        example:
+          message: No se encontró el id 638664bd9fc58e11f6dd7583
+      NotFound:
+        type: string
+        description: No se pudo guardar el carrito
+      getCarritoIDProd:
+        type: object
+        properties:
+          data:
+            type: array
+            description: objetos con los productos
+        example:
+          data:
+            {
+              id: 63861a90553d6ceceba06b79,
+              title: papel para envolver,
+              price: 1280,
+              thumbnail: https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Pencil-256.png,
+              stock: 10
+            }
+    Users:
+      User:
+        type: object
+        properties:
+          username:
+            type: string
+            description: Nombre de usuario
+          password:
+            type: string
+            description: contraseña del usuario
+          name:
+            type: string
+            description: Nombre real del usuario
+          phone:
+            type: string
+            description: telefono del usuario
+          address:
+            type: string
+            description: email del usuario
+          age:
+            type: string
+            description: edad
+          avatar:
+            type: string
+            description: imagen del usuario
+        example:
+          id: 64159907b0d6b98ec0ad03af
+          username: aye123
+          password: IIVrFlH7mJzuyrc85DCMYuepS0HQC1RTxX5dbLe4LrWl9G80nWvly
+          name: ayelen
+          phone: '1162020182'
+          address: direccion 123
+          age: '34'
+          avatar: www.google.com
+      UserLogin:
+        type: object
+        properties:
+          username:
+            type: string
+            description: Nombre de usuario
+          password:
+            type: string
+            description: contraseña del usuario
+        example:
+          id: 64159907b0d6b98ec0ad03af
+          username: aye123
+          password: IIVrFlH7mJzuyrc85DCMYuepS0HQC1RTxX5dbLe4LrWl9G80nWvly
+          name: ayelen
+          phone: '1162020182'
+          address: direccion 123
+          age: '34'
+          avatar: www.google.com
+      NotFound:
+        type: string
+        description: Los datos no fueron cargados correctamente.
+      Login:
+        type: object
+        properties:
+          username:
+            type: string
+            description: Nombre de usuario
+          password:
+            type: string
+            description: contraseña del usuario
+        example:
+          username: aye123
+          password: 123

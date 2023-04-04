@@ -1,0 +1,30 @@
+
+<div class="tabla">
+	<h1>Historial de productos</h1>
+<br>
+
+<% if(fileData) { %>
+<table cellspacing="0" border="0">
+	<tr>
+	  
+	  <th id="title">Producto</th>
+	  <th id="price">Precio</th>
+	  <th id="thumbnail">Foto</th>
+	 
+	</tr>
+	<% fileData.forEach((producto) => { %>
+		<tr>
+			
+			<td><%= producto.title %></td>
+			<td>$<%= producto.price %></td>
+			<td><img src=<%= producto.thumbnail %> alt="not found"></td>
+			
+		</tr>
+		<% }) %>
+  </table>
+ 
+        </div>
+        <% } else{ %>
+            <h3 class="alert alert-warning">No existen datos</h3>
+            <% } %>
+

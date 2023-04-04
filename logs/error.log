@@ -1,0 +1,128 @@
+[2023-02-04T06:37:34.086] [ERROR] myLoggerError - Error: user validation failed: name: Path `name` is required., phone: Path `phone` is required., address: Path `address` is required., age: Path `age` is required., avatar: Path `avatar` is required.
+    at ValidationError.inspect (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:780:19)
+    at inspect (node:internal/util/inspect:345:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2165:40)
+    at Object.format (node:internal/util/inspect:2019:10)
+    at basicLayout (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\log4js.js:42:21)
+    at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\clustering.js:25:28
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\clustering.js:25:13)
+    at Object.send (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\clustering.js:91:7)
+    at Logger._log (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\logger.js:195:16)
+    at Logger.log (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\logger.js:155:12)
+    at Logger.error (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\log4js\lib\logger.js:235:10)
+    at _callee$ (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:52:17)
+    at tryCatch (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:2:1)
+    at Generator.<anonymous> (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:2:1)
+    at Generator.throw (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:2:1)
+    at asyncGeneratorStep (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:2:1)
+    at _throw (C:\Users\Aramonda\Downloads\BackEnd\clase36\src\services\/auth.js:2:1)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  errors: {
+    name: ValidatorError: Path `name` is required.
+        at validate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\document.js:2903:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    phone: ValidatorError: Path `phone` is required.
+        at validate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\document.js:2903:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'phone',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    address: ValidatorError: Path `address` is required.
+        at validate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\document.js:2903:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'address',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    age: ValidatorError: Path `age` is required.
+        at validate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\document.js:2903:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'age',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    avatar: ValidatorError: Path `avatar` is required.
+        at validate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\Aramonda\Downloads\BackEnd\clase36\node_modules\mongoose\lib\document.js:2903:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'avatar',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2023-04-02T07:18:51.971] [ERROR] myLoggerError - Error: Illegal arguments: number, string
+    at _async (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:214:46)
+    at C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:223:17
+    at new Promise (<anonymous>)
+    at Object.hash (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:222:20)
+    at _callee4$ (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:41:25)
+    at tryCatch (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at Generator.<anonymous> (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at Generator.next (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at asyncGeneratorStep (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at _next (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+[2023-04-02T07:21:14.077] [ERROR] myLoggerError - Error: Illegal arguments: number, string
+    at _async (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:214:46)
+    at C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:223:17
+    at new Promise (<anonymous>)
+    at Object.hash (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\bcryptjs\dist\bcrypt.js:222:20)
+    at _callee4$ (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:41:25)
+    at tryCatch (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at Generator.<anonymous> (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at Generator.next (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at asyncGeneratorStep (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+    at _next (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\src\models\/user.js:2:1)
+[2023-04-02T07:21:38.173] [ERROR] myLoggerError - MongoServerError: E11000 duplicate key error collection: ecommerce.users index: username_1 dup key: { username: "Maria123" }
+    at C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\operations\insert.ts:85:25
+    at C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\cmap\connection_pool.ts:533:13
+    at C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\sdam\server.ts:369:13
+    at handleOperationResult (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\sdam\server.ts:502:14)
+    at Connection.onMessage (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\cmap\connection.ts:450:5)
+    at MessageStream.<anonymous> (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\cmap\connection.ts:256:56)
+    at MessageStream.emit (node:events:520:28)
+    at MessageStream.emit (node:domain:475:12)
+    at processIncomingData (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\cmap\message_stream.ts:193:14)
+    at MessageStream._write (C:\Users\Aramonda\Downloads\BackEnd\EntergaFinal\node_modules\mongodb\src\cmap\message_stream.ts:70:5) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'Maria123' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

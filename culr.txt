@@ -1,0 +1,53 @@
+///traer todo
+
+curl --location --request GET 'localhost:8080/api/productos/list' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AqY5REWdRUfbeNDcf2cZMWWhRgdnqbo75.KF0XS%2BK0SaVZo59QO1tc2eia4qVYVIxU%2Bco0sEDtf8Q' \
+--data-raw '{
+   "username": "clara33",
+   "password":"123"
+ 
+}
+'
+
+
+/// buscar por id
+
+curl --location --request GET 'localhost:8080/api/productos/63df893411ccaa648be20043' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AqY5REWdRUfbeNDcf2cZMWWhRgdnqbo75.KF0XS%2BK0SaVZo59QO1tc2eia4qVYVIxU%2Bco0sEDtf8Q' \
+--data-raw '{
+   "username": "clara33",
+   "password":"123"
+ 
+}
+'
+
+///agregar productos
+
+curl --location --request POST 'localhost:8080/api/productos/add' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AqY5REWdRUfbeNDcf2cZMWWhRgdnqbo75.KF0XS%2BK0SaVZo59QO1tc2eia4qVYVIxU%2Bco0sEDtf8Q' \
+--data-raw '{
+    "title": "techo",
+        "price": 1500,
+        "thumbnail": "www.freepik.com",
+        "stock": 5
+}
+'
+
+////borrar producto 
+curl --location --request DELETE 'localhost:8080/api/productos/63e25de743028ead29d1ac6b' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AqY5REWdRUfbeNDcf2cZMWWhRgdnqbo75.KF0XS%2BK0SaVZo59QO1tc2eia4qVYVIxU%2Bco0sEDtf8Q' \
+--data-raw '{
+    "title": "techo",
+        "price": 1500,
+        "thumbnail": "www.freepik.com",
+        "stock": 5
+}
+'
+
+
+
+

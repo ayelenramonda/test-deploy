@@ -1,0 +1,13 @@
+<div class="contenedorMensajes">
+	<h1>Centro de Mensajes</h1>
+	<div id="mensajes"></div>
+	<label for="nombre">Nombre</label>
+	<form onsubmit="return addMessage(this)" id="form">
+		<input type="email" id="mail" class="mensaje" placeholder="e-mail" required />
+
+		<label for="mensaje">Tu mensaje</label>
+
+		<input type="text" id="texto" class="mensaje" placeholder="Mensaje" required />
+		<input type="submit" class="btn" id="botonEnviar" value="Enviar" />
+	</form>
+</div>

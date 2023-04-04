@@ -1,0 +1,335 @@
+paths:
+  /api/productos/add:
+    post:
+      tags:
+        - Productos
+      summary: Registro del producto nuevo en base de datos.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/ProductosPost'
+        required: true
+      responses:
+        200:
+          description: Se registró el producto correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/Producto'
+        500:
+          description: error del servidor.
+          $ref: '#/components/schema/Productos/NotFound'
+  /api/productos/list:
+    get:
+      tags:
+        - Productos
+      summary: Lista de productos en base de datos
+      responses:
+        200:
+          description: Lista de Productos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/getAllProductos'
+        500:
+          description: error de servidor
+          $ref: '#/components/schema/Productos/NotFound'
+  /api/productos/{id}:
+    get:
+      tags:
+        - Productos
+      summary: Listar productos por id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: string id
+          schema:
+            type: string
+      responses:
+        200:
+          description: producto encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/Producto'
+        404:
+          description: no se encuentra producto con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/errorGetById'
+    delete:
+      tags:
+        - Productos
+      summary: Eliminar producto por id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: string id required
+          schema:
+            type: string
+      responses:
+        200:
+          description: producto eliminado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/deleteById'
+        404:
+          description: No se encuentra producto con id {id}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Productos/errorGetById'
+  /api/carrito/:
+    post:
+      tags:
+        - Carrito
+      summary: Registro carritos en base de datos.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/CarritoPost'
+        required: true
+      responses:
+        200:
+          description: Se registró el carrito correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/Carrito'
+        500:
+          description: error del servidor.
+          $ref: '#/components/schema/Carritos/NotFound'
+  /api/carrito:
+    get:
+      tags:
+        - Carrito
+      summary: Lista de carritos en base de datos
+      responses:
+        200:
+          description: Lista de carritos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/getAllCarritos'
+        500:
+          description: error de servidor
+          $ref: '#/components/schema/Carritos/NotFound'
+  /api/carrito/{id}/productos:
+    get:
+      tags:
+        - Carrito
+      summary: Listar productos en un carrito
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id carrito
+          schema:
+            type: string
+      responses:
+        200:
+          description: carrito encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/getCarritoIDProd'
+        404:
+          description: no se encuentra carrito con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/errorGetByIdCarr'
+  /api/carrito/compra/{id}:
+    get:
+      tags:
+        - Carrito
+      summary: Compra del carrito
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id carrito
+          schema:
+            type: string
+      responses:
+        200:
+          description: carrito comprado
+
+        404:
+          description: no se pudo realizar la compra
+  /api/carrito/{id}/productos/{idProd}:
+    post:
+      tags:
+        - Carrito
+      summary: Guardar productos en carrito
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - in: path
+          name: idProd
+          required: true
+          description: ID del producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: ¡Producto agregado!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/Carrito'
+        404:
+          description: no se encuentra carrito con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/errorGetByIdCarr'
+    delete:
+      tags:
+        - Carrito
+      summary: Borrar un producto de un carrito
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: string id
+          schema:
+            type: string
+        - in: path
+          name: idProd
+          required: true
+          description: ID del producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: producto eliminado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/getCarritoIDProd'
+        404:
+          description: no se encuentra carrito con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/errorGetByIdCarr'
+
+  /api/carrito/{id}:
+    get:
+      tags:
+        - Carrito
+      summary: Listar carrito por id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: string id
+          schema:
+            type: string
+      responses:
+        200:
+          description: carrito encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/Carrito'
+        404:
+          description: no se encuentra carrito con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/errorGetByIdCarr'
+    delete:
+      tags:
+        - Carrito
+      summary: Borrar carrito por id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: string id
+          schema:
+            type: string
+      responses:
+        200:
+          description: Carrito eliminado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/getCarritoIDProd'
+        404:
+          description: no se encuentra carrito con este id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Carritos/errorGetByIdCarr'
+  /api/user/login:
+    post:
+      tags:
+        - Users
+      summary: Ingreso de usuarios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/UserPostLogin'
+        required: true
+      responses:
+        200:
+          description: Inicio de sesión correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Users/UserLogin'
+        500:
+          description: error del servidor.
+          $ref: '#/components/schema/Users/NotFound'
+  /api/user/signup:
+    post:
+      tags:
+        - Users
+      summary: Registro de usuarios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/UserPost'
+        required: true
+      responses:
+        200:
+          description: Se registró el usuario correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/Users/User'
+        500:
+          description: error del servidor.
+          $ref: '#/components/schema/Users/NotFound'
+  /api/user/logout:
+    post:
+      tags:
+        - Users
+      summary: Deslogueo de usuarios
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/UserPostLogin'
+        required: true
+      responses:
+        200:
+          description: Nos vemos
+        500:
+          description: error del servidor.
+          $ref: '#/components/schema/Users/NotFound'

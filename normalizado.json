@@ -1,0 +1,87 @@
+{
+	"entities": {
+		"message": {
+			"638c66ef737607c03de0581f": {
+				"_id": "638c66ef737607c03de0581f",
+				"author": {
+					"nombre": "Clara",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"_id": "clara@gmail.com"
+				},
+				"text": "hola",
+				"__v": 0
+			},
+			"638c684b9c606633ab42855b": {
+				"_id": "638c684b9c606633ab42855b",
+				"author": {
+					"nombre": "Juan",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"mail": "juanchispanchis@gmail.com"
+				},
+				"text": "como estas?"
+			},
+			"638c684b9c606633ab42855c": {
+				"_id": "638c684b9c606633ab42855c",
+				"author": {
+					"nombre": "Carlos",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"mail": "carlosalbert@gmail.com"
+				},
+				"text": "todo bien"
+			},
+			"638c684b9c606633ab42855d": {
+				"_id": "638c684b9c606633ab42855d",
+				"author": {
+					"nombre": "Alberto",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"mail": "albert@gmail.com"
+				},
+				"text": "aca"
+			},
+			"638c684b9c606633ab42855e": {
+				"_id": "638c684b9c606633ab42855e",
+				"author": {
+					"nombre": "Ana",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"mail": "anitta@gmail.com"
+				},
+				"text": "por aca llueve"
+			},
+			"638c684b9c606633ab42855f": {
+				"_id": "638c684b9c606633ab42855f",
+				"author": {
+					"nombre": "Carlos",
+					"apellido": "Dellago",
+					"edad": 34,
+					"alias": "ClaritaDellago",
+					"avatar": "https://cdn-icons-png.flaticon.com/512/1993/1993341.png",
+					"mail": "carlinio@gmail.com"
+				},
+				"text": "que bajón"
+			}
+		}
+	},
+	"result": [
+		"638c66ef737607c03de0581f",
+		"638c684b9c606633ab42855b",
+		"638c684b9c606633ab42855c",
+		"638c684b9c606633ab42855d",
+		"638c684b9c606633ab42855e",
+		"638c684b9c606633ab42855f"
+	]
+}

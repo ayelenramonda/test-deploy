@@ -1,0 +1,99 @@
+components:
+  parameters:
+    schemas:
+      ProductosPost:
+        type: object
+        required:
+          - title
+          - price
+          - thumbnail
+          - stock
+        properties:
+          title:
+            type: string
+            description: Nombre del producto.
+          price:
+            type: number
+            description: Precio del producto.
+          thumbnail:
+            type: string
+            description: Imagen del producto.
+          stock:
+            type: number
+            description: Cantidad de producto.
+        example:
+          title: Mesa cuadrada
+          price: 1500
+          thumbnail: https://cdn-icons-png.flaticon.com/512/1663/1663908.png
+          stock: 500
+      CarritoPost:
+        type: object
+        required:
+          - timestamp
+          - productos
+        properties:
+          timestamp:
+            type: string
+            description: Hora y fecha de creacion del carrito.
+          productos:
+            type: object
+            description: Productos del carrito.
+        example:
+          timestamp: ''
+          productos: {}
+      UserPost:
+        type: object
+        required:
+          - username
+          - password
+          - name
+          - phone
+          - address
+          - age
+          - avatar
+          - admin
+        properties:
+          username:
+            type: string
+            description: Nombre de usuario
+          password:
+            type: number
+            description: constraseña
+          name:
+            type: string
+            description: Nombre real
+          phone:
+            type: number
+            description: telefono de contacto
+          address:
+            type: string
+            description: mail del usuario
+          age:
+            type: number
+            description: edad del usuario
+          avatar:
+            type: string
+            description: Imagen del usuario
+        example:
+          username: aye123
+          password: '1234'
+          name: ayelen
+          phone: '1165652365'
+          address: direccion 123
+          age: '34'
+          avatar: https://cdn-icons-png.flaticon.com/512/1993/1993341.png
+      UserPostLogin:
+        type: object
+        required:
+          - username
+          - password
+        properties:
+          username:
+            type: string
+            description: Nombre de usuario
+          password:
+            type: number
+            description: constraseña
+        example:
+          username: aye123
+          password: '1234'
